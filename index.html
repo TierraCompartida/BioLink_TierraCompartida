@@ -15,7 +15,52 @@ body{
     align-items:center;
     overflow:hidden;
     background: linear-gradient(#c23a43,#ffe066,#c23a63,#159895,#ffd43b,#0d7a79);
-    position:relative;
+}
+
+/* CONTENUTO */
+.container{
+    text-align:center;
+    width:100%;
+    max-width:500px;
+    padding:10px;
+    border-radius:0;
+    background:none;
+    backdrop-filter:none;
+}
+
+.profile{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:4px solid white;
+    margin-bottom:15px;
+    object-fit:cover;
+}
+
+h1{
+    color:white;
+}
+
+.bio{
+    color:white;
+    margin-bottom:30px;
+}
+
+.link{
+    display:block;
+    background:white;
+    color:#0d7a79;
+    padding:16px;
+    margin:12px 0;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.25s;
+}
+
+.link:hover{
+    transform:scale(1.08);
+    background:#fff7cc;
 }
 
 /* ONDE */
@@ -28,66 +73,22 @@ body{
     border-radius:45%;
     animation: waveMove 10s linear infinite;
 }
-.wave:nth-child(2){ bottom:20px; opacity:0.5; animation-duration:14s; }
-.wave:nth-child(3){ bottom:40px; opacity:0.3; animation-duration:18s; }
-@keyframes waveMove{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 
-/* CONTENUTO */
-.container{
-    text-align:center;
-    width:90%;
-    max-width:420px;
-    padding:20px;
-    z-index:2;
+.wave:nth-child(2){
+    bottom:20px;
+    opacity:0.5;
+    animation-duration:14s;
 }
 
-.profile{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    border:4px solid white;
-    margin-bottom:15px;
-    object-fit:cover;
+.wave:nth-child(3){
+    bottom:40px;
+    opacity:0.3;
+    animation-duration:18s;
 }
 
-h1{ color:white; }
-.bio{ color:white; margin-bottom:30px; }
-
-.link{
-    display:block;
-    background:white;
-    color:#0d7a79;
-    padding:16px;
-    margin:12px 0;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.25s;
-    position:relative;
-}
-
-.link:hover{ transform:scale(1.08); background:#fff7cc; }
-
-/* PERSONAGGIO CHE CAMMINA */
-.person{
-    position:absolute;
-    width:50px;
-    height:50px;
-    bottom:200px; /* altezza iniziale */
-    left:0;
-    z-index:3;
-    background-image: url('ChatGPT Image 11 feb 2026, 16_55_20.png'); /* sostituisci con la tua immagine */
-    background-size:contain;
-    background-repeat:no-repeat;
-    animation: walkLinks 8s linear infinite;
-}
-
-@keyframes walkLinks{
-    0%{ left:0; bottom:200px; }
-    25%{ left:20%; bottom:250px; }
-    50%{ left:40%; bottom:220px; }
-    75%{ left:60%; bottom:250px; }
-    100%{ left:80%; bottom:200px; }
+@keyframes waveMove{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
 }
 </style>
 </head>
@@ -99,10 +100,6 @@ h1{ color:white; }
 <div class="wave"></div>
 <div class="wave"></div>
 
-<!-- PERSONAGGIO -->
-<div class="person"></div>
-
-<!-- CONTENUTO -->
 <div class="container">
 
 <img class="profile" src="Imagen de WhatsApp 2025-06-13 a las 19.00.01_37d6eaa9.jpg">
