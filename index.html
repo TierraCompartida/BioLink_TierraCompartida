@@ -13,15 +13,19 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(-45deg,#0d7a79,#ffd43b,#ffe066,#159895);
-    background-size:400% 400%;
-    animation: gradientMove 12s ease infinite;
+    overflow:hidden;
+    background: linear-gradient(#0d7a79,#159895,#ffd43b,#ffe066);
 }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* CONTENUTO */
+.container{
+    text-align:center;
+    width:100%;
+    max-width:500px;
+    padding:10px;
+    border-radius:0;
+    background:none;
+    backdrop-filter:none;
 }
 
 .profile{
@@ -33,18 +37,8 @@ body{
     object-fit:cover;
 }
 
-.container{
-    text-align:center;
-    width:90%;
-    max-width:420px;
-    padding:0;
-    background:none;
-    backdrop-filter:none;
-}
-    
 h1{
     color:white;
-    margin:10px 0;
 }
 
 .bio{
@@ -68,15 +62,47 @@ h1{
     transform:scale(1.08);
     background:#fff7cc;
 }
+
+/* ONDE */
+.wave{
+    position:absolute;
+    bottom:0;
+    width:200%;
+    height:180px;
+    background:rgba(255,255,255,0.25);
+    border-radius:45%;
+    animation: waveMove 10s linear infinite;
+}
+
+.wave:nth-child(2){
+    bottom:20px;
+    opacity:0.5;
+    animation-duration:14s;
+}
+
+.wave:nth-child(3){
+    bottom:40px;
+    opacity:0.3;
+    animation-duration:18s;
+}
+
+@keyframes waveMove{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+}
 </style>
 </head>
 
 <body>
 
+<!-- ONDE -->
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
+
 <div class="container">
 
-<!-- FOTO -->
-<img class="profile" src="Imagen de WhatsApp 2025-06-13 a las 19.00.01_37d6eaa9.jpg">
+<img class="profile" src="foto.jpg">
 
 <h1>Tierra Compartida</h1>
 <p class="bio">Viajes. Comunidad. Cultura. Conexión.</p>
