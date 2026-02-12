@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tierra Compartida</title>
 
+<!-- ICONS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
 body{
     margin:0;
@@ -13,21 +16,29 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
-    background: linear-gradient(#c23a43,#ffe066,#c23a63,#159895,#ffd43b,#0d7a79);
+    background: linear-gradient(-45deg,#ff3cac,#784ba0,#2b86c5,#00c9a7);
+    background-size:400% 400%;
+    animation: bg 12s ease infinite;
 }
 
-/* CONTENUTO */
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
 .container{
     text-align:center;
-    width:100%;
-    max-width:500px;
-    padding:10px;
-    border-radius:0;
-    background:none;
-    backdrop-filter:none;
+    width:90%;
+    max-width:430px;
+    padding:30px;
+    border-radius:28px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.35);
 }
 
+/* FOTO */
 .profile{
     width:130px;
     height:130px;
@@ -39,6 +50,8 @@ body{
 
 h1{
     color:white;
+    margin:10px 0;
+    font-size:28px;
 }
 
 .bio{
@@ -46,59 +59,71 @@ h1{
     margin-bottom:30px;
 }
 
+/* LINK BASE */
 .link{
-    display:block;
-    background:white;
-    color:#0d7a79;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
     padding:16px;
-    margin:12px 0;
-    border-radius:14px;
+    margin:14px 0;
+    border-radius:16px;
     text-decoration:none;
     font-weight:bold;
-    transition:0.25s;
+    color:white;
+    font-size:16px;
+    transform:translateY(30px);
+    opacity:0;
+    animation: linkIn 0.6s ease forwards;
 }
 
-.link:hover{
-    transform:scale(1.08);
-    background:#fff7cc;
+.link i{
+    font-size:20px;
 }
 
-/* ONDE */
-.wave{
-    position:absolute;
-    bottom:0;
-    width:200%;
-    height:180px;
-    background:rgba(255,255,255,0.25);
-    border-radius:45%;
-    animation: waveMove 10s linear infinite;
+/* animazione entrata */
+@keyframes linkIn{
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
 
-.wave:nth-child(2){
-    bottom:20px;
-    opacity:0.5;
-    animation-duration:14s;
+/* delay animazioni */
+.link:nth-child(4){animation-delay:.1s;}
+.link:nth-child(5){animation-delay:.25s;}
+.link:nth-child(6){animation-delay:.4s;}
+
+/* INSTAGRAM */
+.instagram{
+    background: linear-gradient(45deg,#fd1d1d,#fcb045,#833ab4);
+}
+.instagram:hover{
+    transform:scale(1.06);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-.wave:nth-child(3){
-    bottom:40px;
-    opacity:0.3;
-    animation-duration:18s;
+/* TIKTOK */
+.tiktok{
+    background:#000;
+}
+.tiktok:hover{
+    background:#111;
+    transform:scale(1.06);
 }
 
-@keyframes waveMove{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
+/* YOUTUBE */
+.youtube{
+    background:#ff0000;
+}
+.youtube:hover{
+    background:#e00000;
+    transform:scale(1.06);
 }
 </style>
 </head>
 
 <body>
-
-<!-- ONDE -->
-<div class="wave"></div>
-<div class="wave"></div>
-<div class="wave"></div>
 
 <div class="container">
 
@@ -107,9 +132,17 @@ h1{
 <h1>Tierra Compartida</h1>
 <p class="bio">Viajes. Comunidad. Cultura. Conexión.</p>
 
-<a class="link" href="https://www.tiktok.com/@tierra_compartida" target="_blank">TikTok</a>
-<a class="link" href="https://www.instagram.com/_tierracompartida" target="_blank">Instagram</a>
-<a class="link" href="https://www.youtube.com/@TierraCompartida" target="_blank">YouTube</a>
+<a class="link tiktok" href="https://www.tiktok.com/@tierra_compartida" target="_blank">
+<i class="fa-brands fa-tiktok"></i> TikTok
+</a>
+
+<a class="link instagram" href="https://www.instagram.com/_tierracompartida" target="_blank">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a class="link youtube" href="https://www.youtube.com/@TierraCompartida" target="_blank">
+<i class="fa-brands fa-youtube"></i> YouTube
+</a>
 
 </div>
 
