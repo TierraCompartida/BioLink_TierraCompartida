@@ -1,0 +1,49 @@
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#0f5132;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.posts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:40px;
+}
+
+article{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+article img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+article h2{
+padding:15px;
+}
+
+article p{
+padding:0 15px 15px;
+}
+
+article a{
+display:block;
+background:#0f5132;
+color:white;
+text-align:center;
+padding:12px;
+text-decoration:none;
+}
