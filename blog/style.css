@@ -1,4 +1,4 @@
-/* ===== Reset base ===== */
+/* ===== RESET BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,80 +6,77 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
   color: #333;
+  line-height: 1.6;
   padding: 20px;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 5px;
+  font-size: 2.3rem;
 }
 
 header p {
-  font-size: 1rem;
-  color: #555;
+  color: #666;
+  margin-top: 5px;
 }
 
 header a {
   display: inline-block;
   margin-top: 10px;
-  color: #0066cc;
+  color: #0077cc;
   text-decoration: none;
+  font-weight: bold;
 }
 
 header a:hover {
   text-decoration: underline;
 }
 
-/* ===== Sezione articoli ===== */
+/* ===== SEZIONE POST ===== */
 .posts {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Articolo singolo */
 .posts article {
+  margin-bottom: 40px;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
-/* Foto articolo */
+/* ===== FOTO ARTICOLO ===== */
 .article-photo img {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
   margin-bottom: 15px;
 }
 
-/* Titolo articolo */
+/* ===== TITOLI ===== */
 .posts h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 1.7rem;
+  margin-bottom: 8px;
 }
 
-/* Descrizione articolo */
 .posts p {
-  font-size: 1rem;
-  margin-bottom: 10px;
   color: #555;
+  margin-bottom: 10px;
 }
 
-/* Link articolo */
+/* ===== LINK LEGGI ===== */
 .posts a {
   display: inline-block;
-  margin-top: 10px;
-  color: #0066cc;
+  margin-top: 8px;
+  color: #0077cc;
   text-decoration: none;
   font-weight: bold;
 }
@@ -88,23 +85,24 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* ===== Box autore ===== */
+/* ===== BOX AUTORE ===== */
 .author-box {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #f7f7f7;
+  background-color: #f3f3f3;
   padding: 8px 12px;
   border-radius: 8px;
   margin-top: 10px;
+  width: fit-content;
 }
 
 .author-photo {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ccc;
+  border: 2px solid #ddd;
 }
 
 .author-name {
@@ -112,13 +110,16 @@ header a:hover {
   color: #333;
 }
 
-/* ===== Sezione documenti ===== */
+/* ===== SEZIONE DOCUMENTI ===== */
 #documenti {
-  margin-top: 50px;
+  margin-top: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #documenti h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 15px;
 }
 
@@ -131,7 +132,7 @@ header a:hover {
 }
 
 .doc-link {
-  color: #0066cc;
+  color: #0077cc;
   text-decoration: none;
 }
 
@@ -139,13 +140,22 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .posts article {
-    padding-bottom: 15px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
   }
 
-  .article-photo img {
-    max-height: 250px;
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .posts h2 {
+    font-size: 1.4rem;
+  }
+
+  .author-photo {
+    width: 38px;
+    height: 38px;
   }
 }
